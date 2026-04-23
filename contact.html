@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réserver — Slowart Isort</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-logo">
+      <img src="images/logo-resort2.jpg" alt="Slowart Isort Logo" class="logo-img">
+    </div>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="chambre-vip.html">Chambre VIP</a></li>
+      <li><a href="suite-luxueuse.html">Suite Luxueuse</a></li>
+      <li><a href="jacuzzi.html">Jacuzzi Privatif</a></li>
+      <li><a href="terrasse-bar.html">Terrasse & Bar</a></li>
+      <li><a href="cinema.html">Cinéma Extérieur</a></li>
+      <li><a href="contact.html" class="nav-cta active">Réserver</a></li>
+    </ul>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html">Accueil</a><span>›</span> Réserver
+  </div>
+
+  <section class="page-hero" style="height:40vh; min-height:300px;">
+    <div class="page-hero-bg" style="background-image: url('images/global.jpg')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="section-label">By Charron Family</span>
+      <h1>Réservez<br><em style="color:var(--gold-light);">votre séjour</em></h1>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-label">Nous contacter</span>
+          <h2>Une question,<br>une réservation ?</h2>
+          <p>Annulation possible jusqu'à 48h à l'avance. Nous sommes disponibles pour répondre à toutes vos questions et vous aider à organiser le séjour parfait.</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div class="contact-detail-text">
+              <strong>Téléphone</strong>
+              <a href="tel:0769117006">07.69.11.70.06</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🕐</div>
+            <div class="contact-detail-text">
+              <strong>Annulation</strong>
+              <span style="font-size:1rem; color:var(--text-muted);">Jusqu'à 48h avant l'arrivée</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🌿</div>
+            <div class="contact-detail-text">
+              <strong>Expérience</strong>
+              <span style="font-size:1rem; color:var(--text-muted);">Hôtel exclusif, By Charron Family</span>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem; padding:1.5rem; background:var(--parchment);">
+            <p style="font-family:var(--font-display); font-size:1.1rem; font-style:italic; color:var(--brown); margin:0;">"Et n'hésitez pas à nous laisser un avis Google après votre séjour !"</p>
+            <p style="font-size:0.75rem; color:var(--gold); letter-spacing:0.1em; text-transform:uppercase; margin-top:0.5rem;">— La Famille Charron</p>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <h3>Demande de réservation</h3>
+          <div class="form-group">
+            <label for="nom">Nom complet</label>
+            <input type="text" id="nom" placeholder="Votre nom">
+          </div>
+          <div class="form-group">
+            <label for="tel">Téléphone</label>
+            <input type="tel" id="tel" placeholder="06 XX XX XX XX">
+          </div>
+          <div class="form-group">
+            <label for="dates">Dates souhaitées</label>
+            <input type="text" id="dates" placeholder="Ex: 15 au 17 juillet 2025">
+          </div>
+          <div class="form-group">
+            <label for="service">Service souhaité</label>
+            <select id="service">
+              <option value="">Choisir un service...</option>
+              <option>Chambre VIP</option>
+              <option>Suite Luxueuse</option>
+              <option>Jacuzzi Privatif</option>
+              <option>Terrasse & Bar</option>
+              <option>Cinéma Extérieur</option>
+              <option>Séjour complet (tout inclus)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message (optionnel)</label>
+            <textarea id="message" placeholder="Vos demandes particulières, questions..."></textarea>
+          </div>
+          <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:1.2rem;">Ce formulaire est indicatif. Pour confirmer votre réservation, appelez-nous au <strong style="color:var(--brown);">07.69.11.70.06</strong>.</p>
+          <a href="tel:0769117006" class="btn btn-primary" style="width:100%; text-align:center; display:block;">Appeler pour réserver</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo-resort2.jpg" alt="Slowart Isort" class="footer-logo">
+          <p>Hôtel de luxe exclusif<br>By Charron Family</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="chambre-vip.html">Chambre VIP</a></li>
+            <li><a href="suite-luxueuse.html">Suite Luxueuse</a></li>
+            <li><a href="jacuzzi.html">Jacuzzi Privatif</a></li>
+            <li><a href="terrasse-bar.html">Terrasse & Bar</a></li>
+            <li><a href="cinema.html">Cinéma Extérieur</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Réservations</h4>
+          <p>Annulation possible jusqu'à<br><strong>48h à l'avance</strong></p>
+          <a href="tel:0769117006" class="footer-phone">07.69.11.70.06</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Slowart Isort · Hôtel de luxe · By Charron Family</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
