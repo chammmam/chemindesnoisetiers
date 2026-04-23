@@ -3,13 +3,21 @@ const navbar = document.getElementById('navbar');
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
+// Pages without a full-screen hero must keep the solid navbar at all times
+const hasFullHero = !!document.querySelector('.hero');
+const SCROLL_THRESHOLD = 60;
+
+function updateNavbarState() {
+  if (!navbar) return;
+  if (!hasFullHero || window.scrollY > SCROLL_THRESHOLD) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
   }
-});
+}
+
+updateNavbarState();
+window.addEventListener('scroll', updateNavbarState, { passive: true });
 
 // Mobile menu toggle
 if (navToggle) {
@@ -22,8 +30,8 @@ if (navToggle) {
 // Close mobile menu on link click
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    navToggle.classList.remove('open');
-    navLinks.classList.remove('open');
+    if (navToggle) navToggle.classList.remove('open');
+    if (navLinks) navLinks.classList.remove('open');
   });
 });
 
@@ -48,7 +56,6 @@ document.querySelectorAll('.service-card, .intro-grid, .gallery-item').forEach(e
   observer.observe(el);
 });
 
-// Add visible class styles inline
 const style = document.createElement('style');
 style.textContent = `.visible { opacity: 1 !important; transform: translateY(0) !important; }`;
 document.head.appendChild(style);

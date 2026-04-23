@@ -112,14 +112,21 @@ h3 { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 0.75rem; }
   align-items: center;
   justify-content: space-between;
   padding: 1.2rem 2.5rem;
-  transition: var(--transition);
+  transition: background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 18, 8, 0.65) 0%,
+    rgba(26, 18, 8, 0.25) 70%,
+    rgba(26, 18, 8, 0) 100%
+  );
 }
 
 .navbar.scrolled {
   background: rgba(26, 18, 8, 0.96);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 0.8rem 2.5rem;
-  box-shadow: 0 1px 0 rgba(196,154,60,0.2);
+  box-shadow: 0 1px 0 rgba(196,154,60,0.2), 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .nav-logo .logo-img {
@@ -138,14 +145,19 @@ h3 { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 0.75rem; }
 
 .nav-links a {
   font-size: 0.72rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(253,250,245,0.8);
-  transition: color 0.3s;
+  color: rgba(253,250,245,0.95);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.55);
+  transition: color 0.3s, text-shadow 0.3s;
 }
 .nav-links a:hover,
 .nav-links a.active { color: var(--gold-light); }
+
+.navbar.scrolled .nav-links a {
+  text-shadow: none;
+}
 
 .nav-links .nav-cta {
   background: var(--gold);
